@@ -1,0 +1,81 @@
+/* Food.css */
+
+.food-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 35px;
+  }
+  
+  .food-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .food-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .food-input {
+    margin-bottom: 15px;
+  }
+  
+  .food-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .food-input input,
+  .food-input select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .food-input select {
+    cursor: pointer;
+  }
+  
+  .food-button {
+    background-color: palevioletred;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .food-button:hover {
+    background-color: pink;
+  }
+  
+  .food-result {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .food-result h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .food-result p {
+    font-size: 18px;
+    color: #666;
+  }
+  .food-description {
+    text-align: center;
+  }
