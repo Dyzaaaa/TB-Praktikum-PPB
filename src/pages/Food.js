@@ -9,8 +9,6 @@ export default function Food() {
   const [foodAmount, setFoodAmount] = useState(null);
 
   const calculateFood = () => {
-    // Implement your food calculation logic here based on weight, age, activity level, and food type
-    // This is a simplified example, and you should consult a veterinarian or refer to a specific pet food guideline for accurate recommendations
     let factor = 0;
 
     if (activityLevel === "low") {
@@ -24,10 +22,8 @@ export default function Food() {
     let result = 0;
 
     if (foodType === "dry") {
-      // Example formula for dry food
       result = (weight * 30 + age * 5) * factor;
     } else if (foodType === "wet") {
-      // Example formula for wet food
       result = (weight * 25 + age * 4) * factor;
     }
 

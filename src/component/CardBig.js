@@ -11,7 +11,6 @@ export default function CardBig(props) {
 
   useEffect(() => {
     if (showCatFunFact) {
-      // Lakukan fetch hanya jika showCatFunFact berubah menjadi true
       const fetchCatFact = async () => {
         try {
           const response = await fetch('https://cat-facts12.p.rapidapi.com/Fact', {
@@ -38,7 +37,6 @@ export default function CardBig(props) {
     <div className="containerBig">
       <img src={props.img} alt="" className="posterBig" onClick={toggleCatFunFact} />
 
-      {/* Cat Fun Fact Modal */}
       {showCatFunFact && (
         <div className="catFunFactModal" onClick={toggleCatFunFact}>
           <div className="catFunFactContent" onClick={(e) => e.stopPropagation()}>

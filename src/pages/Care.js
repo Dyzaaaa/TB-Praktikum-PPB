@@ -18,7 +18,6 @@ export default function Care() {
           </Link>
         </div>
         <div className="care-link">
-          {/* Link to Safefood page */}
           <Link to="/safefood" className="safefood-link">
             <GiOpenedFoodCan size={32} className="food-icon" />
             <span className="food-text">Safe Food List</span>

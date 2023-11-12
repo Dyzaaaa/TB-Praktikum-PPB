@@ -1,7 +1,7 @@
 // Safefood.js
 import React from 'react';
 import './SafeFood.css';
-import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa'; // Import ikon dari FontAwesome
+import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa'; 
 
 const Safefood = () => {
   return (
@@ -17,7 +17,6 @@ const Safefood = () => {
             <li><FaCheckCircle className="icon1" /> Fish</li>
             <li><FaCheckCircle className="icon1" /> Veggies</li>
             <li><FaCheckCircle className="icon1" /> Eggs</li>
-            {/* Tambahkan makanan aman lainnya */}
           </ul>
         </div>
 
@@ -28,7 +27,6 @@ const Safefood = () => {
             <li><FaTimesCircle className="icon1" /> Onions and Garlic</li>
             <li><FaTimesCircle className="icon1" /> Caffeine</li>
             <li><FaTimesCircle className="icon1" /> Alcohol</li>
-            {/* Tambahkan makanan tidak aman lainnya */}
           </ul>
         </div>
       </div>
