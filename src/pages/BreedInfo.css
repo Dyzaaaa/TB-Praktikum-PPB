@@ -6,45 +6,53 @@
     left: 0;
     width: 100%;
     height: 150%;
-    z-index: -1;
+    z-index: -1; 
   }
-  
-  .breed-container {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .breed-info {
-    display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    margin: 20px;
+  .breed-info-container {
+    max-width: 800px;
+    margin: 150px auto;
     padding: 20px;
-    background-color: #f5f5f5;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  h2 {
-    font-size: 28px;
-    color: #333;
-    text-align: center;
-    margin-top: 0;
+  .breed-info-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
   }
   
-  p {
-    font-size: 18px;
-    text-align: left;
+  .breed-info-container h2 {
+    color: #333;
+    font-size: 24px;
     margin-bottom: 10px;
-    color: #666;
   }
   
-  .property-info {
+  .breed-info-container p {
     font-size: 16px;
-    color: #333;
-    margin-bottom: 5px;
-    text-align: left;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  
+  .breed-description {
+    font-style: italic;
+  }
+  
+  .breed-origin::before {
+    content: "Origin: ";
+    font-weight: bold;
+  }
+  
+  .breed-temperament::before {
+    content: "Temperament: ";
+    font-weight: bold;
+  }
+  
+  .breed-life-span::before {
+    content: "Life Span: ";
+    font-weight: bold;
   }
   

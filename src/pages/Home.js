@@ -21,14 +21,14 @@ const Home = () => {
       <div className="featured-content">
         <div className="featured-item">
           <h2>Popular Breeds</h2>
-          <p>Discover some of the most popular cat breeds and their unique characteristics.</p>
+          <p>Discover various cat breeds and their unique characteristics.</p>
           <a href="/gallery">Explore Breeds</a>
         </div>
         </div>
         <div className="featured-content">
         <div className="featured-item">
           <h2>Cat Care Tips</h2>
-          <p>Learn essential tips for taking care of your feline friend, from nutrition to grooming.</p>
+          <p>Learn essential tips for taking care of your feline friend.</p>
           <a href="/care">Read Care Guide</a>
         </div>
       </div>
@@ -36,7 +36,7 @@ const Home = () => {
       <section className="about-us">
         <h2>About Us</h2>
         <p>
-          Cat World is dedicated to providing valuable information and resources for cat enthusiasts.
+          Cat World is dedicated to providing valuable information and resources for cat lovers.
           Our mission is to help you create a happy and healthy life for your beloved cats.
         </p>
       </section>

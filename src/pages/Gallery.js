@@ -1,14 +1,13 @@
-// Gallery.js
 import React, { Fragment, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import CardBig from "../component/CardBig";
-import BreedInfo from "./BreedInfo";
 import "./Gallery.css";
 
 const Gallery = () => {
   const [catImages, setCatImages] = useState([]);
   const [selectedBreed, setSelectedBreed] = useState('');
   const [breeds, setBreeds] = useState([]);
-  const [breedInfo, setBreedInfo] = useState(null);
+  const [setBreedInfo] = useState(null);
 
   const [showModal, setShowModal] = useState(false);
   const [catFunFact, setCatFunFact] = useState("");
@@ -102,9 +101,15 @@ const Gallery = () => {
             ))}
           </select>
         </div>
-        {selectedBreed && breedInfo && (
-          <BreedInfo breedInfo={breedInfo} />
+
+        {selectedBreed && (
+          <div>
+            <Link to={`/breedinfo/${selectedBreed}`}>
+              <h2>{breeds.find(breed => breed.id === selectedBreed)?.name}</h2>
+            </Link>
+          </div>
         )}
+
         <div className="cat-gallery">
           {catImages.map((cat) => (
             <Fragment key={cat.id}>
@@ -113,6 +118,7 @@ const Gallery = () => {
           ))}
         </div>
       </div>
+
       {showModal && (
         <div className="modal">
           <div className="modal-content">
