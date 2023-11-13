@@ -1,8 +1,5 @@
 {
   "projects": {
-    "default": "cat-world-57ae3",
-    "deploy": "cat-world-57ae3"
-  },
-  "targets": {},
-  "etags": {}
+    "default": "cat-world-319c5"
+  }
 }
