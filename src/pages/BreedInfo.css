@@ -27,6 +27,7 @@
     color: #333;
     font-size: 24px;
     margin-bottom: 10px;
+    font-family: Arial;
   }
   
   .breed-info-container p {
@@ -35,6 +36,7 @@
     margin-bottom: 10px;
     text-align: justify;
     text-justify: inter-word;
+    font-family: Arial;
   }
   
   .breed-description {

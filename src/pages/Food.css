@@ -12,12 +12,14 @@
     font-size: 28px;
     margin-bottom: 20px;
     color: #333;
+    font-family: Arial;
   }
   
   .food-description {
     font-size: 16px;
     margin-bottom: 20px;
     color: #666;
+    font-family: Arial;
   }
   
   .food-input {
@@ -68,11 +70,13 @@
     font-size: 24px;
     margin-bottom: 10px;
     color: #333;
+    font-family: Arial;
   }
   
   .food-result p {
     font-size: 18px;
     color: #666;
+    font-family: Arial;
   }
   .food-description {
     text-align: center;

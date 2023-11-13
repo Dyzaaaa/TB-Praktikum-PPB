@@ -23,6 +23,7 @@
     font-size: 28px;
     color: #333;
     text-align: center;
+    font-family: Arial;
   }
   
   .care-description {
@@ -30,6 +31,7 @@
     text-align: center;
     color: #666;
     margin-bottom: 20px;
+    font-family: Arial;
   }
   
   .care-content {
@@ -47,6 +49,7 @@
     font-size: 24px;
     color: #333;
     margin-top: 0;
+    font-family: Arial;
   }
   
   .care-content ul {
@@ -58,6 +61,7 @@
     font-size: 16px;
     color: #666;
     margin: 8px 0;
+    font-family: Arial;
   }
   
   .care-icon {
@@ -77,6 +81,7 @@
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
+    font-family: Arial;
   }
   
   .care-link:hover {

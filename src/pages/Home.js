@@ -20,7 +20,7 @@ const Home = () => {
       </div>
       <div className="featured-content">
         <div className="featured-item">
-          <h2>Popular Breeds</h2>
+          <h2>Cat Breeds</h2>
           <p>Discover various cat breeds and their unique characteristics.</p>
           <a href="/gallery">Explore Breeds</a>
         </div>
