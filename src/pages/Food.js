@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Food.css"; // Import CSS for styling
+import "./Food.css"; 
 
 export default function Food() {
   const [weight, setWeight] = useState(0);

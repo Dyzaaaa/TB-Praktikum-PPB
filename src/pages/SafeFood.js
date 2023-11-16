@@ -1,4 +1,3 @@
-// Safefood.js
 import React from 'react';
 import './SafeFood.css';
 import { FaCheckCircle, FaTimesCircle } from 'react-icons/fa'; 
