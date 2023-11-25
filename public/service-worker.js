@@ -1,5 +1,3 @@
-// public/service-worker.js
-
 const CACHE_NAME = 'my-cache';
 const urlsToCache = [
   '/',
@@ -7,11 +5,9 @@ const urlsToCache = [
   '/static/css/App.css',
   '/favicon.ico',
   '/manifest.json',
-  'https://api.thecatapi.com/v1/images/search?breed_ids=${breed}&limit=10',
-  'https://api.thecatapi.com/v1/breeds',
-  'https://api.thecatapi.com/v1/breeds/${breedId}',
-  'https://cat-facts12.p.rapidapi.com/Fact',
   'https://wallpaperaccess.com/full/3057721.jpg',
+  'https://raw.githubusercontent.com/Dyzaaaa/TB-Praktikum-PPB/main/public/namo.jpeg',
+  'https://raw.githubusercontent.com/Dyzaaaa/TB-Praktikum-PPB/main/public/wahyuni.jpg',
 ];
 
 self.addEventListener('install', (event) => {

@@ -17,7 +17,7 @@ export default function CardBig(props) {
             method: 'GET',
             headers: {
               'X-RapidAPI-Host': 'cat-facts12.p.rapidapi.com',
-              'X-RapidAPI-Key': '593a9c5d11msh21b7f3d237350bep1aeaa3jsn4fb4d407a147', // Ganti dengan kunci API RapidAPI Anda
+              'X-RapidAPI-Key': '593a9c5d11msh21b7f3d237350bep1aeaa3jsn4fb4d407a147',
             },
           });
   

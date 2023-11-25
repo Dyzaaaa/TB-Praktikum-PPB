@@ -83,7 +83,7 @@
     transition: background-color 0.3s;
     font-family: Arial;
   }
-  
+
   .care-link:hover {
     background-color: palevioletred;
   }

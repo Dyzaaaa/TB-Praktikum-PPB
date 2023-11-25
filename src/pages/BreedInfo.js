@@ -14,7 +14,7 @@ const BreedInfo = () => {
         const data = await response.json();
         setBreedInfo(data);
       } catch (error) {
-        console.error("Error fetching breed info:", error);
+        console.error("Error", error);
       }
     };
 

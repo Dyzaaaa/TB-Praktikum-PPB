@@ -31,7 +31,7 @@ const Safefood = () => {
 
       <div className="health-tips">
         <p>
-        Cat food should be specially formulated for cats' nutritional needs. Make sure
+        Cat food should be specially formulated for cat's nutritional needs. Make sure
         always provide food that is appropriate for your cat's age and health condition.
         Give the right portions to prevent obesity, and always provide clean water.
         </p>

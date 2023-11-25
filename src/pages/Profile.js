@@ -1,6 +1,7 @@
 import React from 'react';
 import './Profile.css';
 
+
 const Profile = () => {
   return (
     <div className="profile-container">
@@ -8,19 +9,29 @@ const Profile = () => {
       <div className="owner-profile">
         <h2>Cat's Owner</h2>
         <img
-          src="https://i.postimg.cc/h4pFCKr1/IMG-8307.jpg" 
+          src="https://raw.githubusercontent.com/Dyzaaaa/TB-Praktikum-PPB/main/public/namo.jpeg" 
           alt="Owner"
           className="profile-image"
         />
         <p>
-          Hi, I'm Namo. I love cats and enjoy taking care of my furry friends.
+          Hi, I'm Dyza Khoirun Nisa. I love cats and enjoy taking care of my furry friends.
         </p>
+        <br/>
+        <p>Find me at:</p>
+        <a 
+          href="https://www.instagram.com/dyzasssa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          dyzasssa
+        </a>
+        <p>dyzakhoirunnisa@students.undip.ac.id</p>
       </div>
 
       <div className="cat-profile">
         <h2>Cat's Profile</h2>
         <img
-          src="https://i.postimg.cc/c1TTqHP6/c51fe3ec-a191-4e03-8847-d14b985c127b-2.jpg" 
+          src="https://raw.githubusercontent.com/Dyzaaaa/TB-Praktikum-PPB/main/public/wahyuni.jpg" 
           alt="Cat"
           className="profile-image"
         />
