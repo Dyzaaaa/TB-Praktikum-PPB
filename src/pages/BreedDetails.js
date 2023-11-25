@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import CardBig from "../component/CardBig";
 import CatFunFact from "../component/CatFunFact";
+import "./Gallery.css";
 
 const BreedDetails = () => {
   const { breedid } = useParams();
