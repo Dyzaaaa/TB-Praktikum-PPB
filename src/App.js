@@ -10,6 +10,7 @@ import SafeFood from "./pages/SafeFood";
 import CareTips from "./pages/CareTips";
 import Profile from './pages/Profile';
 import BreedInfo from './pages/BreedInfo';
+import BreedDetails from './pages/BreedDetails';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/caretips" element={<CareTips />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/breedinfo/:breedId" element={<BreedInfo />} />
+        <Route path="/breed/:breedid" element={<BreedDetails />} />
       </Routes>
       <footer>
         <NavLink to="/home" className="iconWrapper">

@@ -1,16 +1,17 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import CardBig from "../component/CardBig";
+import CatFunFact from "../component/CatFunFact"; 
 import "./Gallery.css";
 
-const Gallery = () => {
+const Gallery = ({ breed }) => {
   const [catImages, setCatImages] = useState([]);
-  const [selectedBreed, setSelectedBreed] = useState('');
+  const [selectedBreed, setSelectedBreed] = useState("");
   const [breeds, setBreeds] = useState([]);
   const [setBreedInfo] = useState(null);
-
   const [showModal, setShowModal] = useState(false);
   const [catFunFact, setCatFunFact] = useState("");
+  const navigate = useNavigate();
 
   const fetchCatImages = async (breed) => {
     try {
@@ -40,7 +41,7 @@ const Gallery = () => {
       const data = await response.json();
       setBreedInfo(data);
     } catch (error) {
-      console.error("Error", error);
+      console.error("Error fetching breed details:", error);
     }
   };
 
@@ -65,6 +66,7 @@ const Gallery = () => {
     setSelectedBreed(newBreedId);
     if (newBreedId) {
       fetchBreedInfo(newBreedId);
+      navigate(`/breed/${newBreedId}`);
     }
   };
 
@@ -89,10 +91,7 @@ const Gallery = () => {
       <div className="breed-container">
         <div className="breedButtons">
           <label>Pilih Ras:</label>
-          <select
-            value={selectedBreed}
-            onChange={handleBreedChange}
-          >
+          <select value={selectedBreed} onChange={handleBreedChange}>
             <option value="pilih-ras">Pilih Ras</option>
             {breeds.map((breed) => (
               <option key={breed.id} value={breed.id}>
@@ -105,7 +104,7 @@ const Gallery = () => {
         {selectedBreed && (
           <div>
             <Link to={`/breedinfo/${selectedBreed}`}>
-              <h2>{breeds.find(breed => breed.id === selectedBreed)?.name}</h2>
+              <h2>{breeds.find((b) => b.id === selectedBreed)?.name}</h2>
             </Link>
           </div>
         )}
@@ -120,12 +119,7 @@ const Gallery = () => {
       </div>
 
       {showModal && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={hideCatFunFact}>&times;</span>
-            <p>{catFunFact}</p>
-          </div>
-        </div>
+        <CatFunFact catFunFact={catFunFact} closeModal={hideCatFunFact} />
       )}
     </div>
   );

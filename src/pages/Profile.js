@@ -17,15 +17,16 @@ const Profile = () => {
           Hi, I'm Dyza Khoirun Nisa. I love cats and enjoy taking care of my furry friends.
         </p>
         <br/>
-        <p>Find me at:</p>
+        <p>Instagram:  
         <a 
           href="https://www.instagram.com/dyzasssa"
           target="_blank"
           rel="noopener noreferrer"
         >
-          dyzasssa
+           dyzasssa
         </a>
-        <p>dyzakhoirunnisa@students.undip.ac.id</p>
+        </p>
+        <p>Email: dyzakhoirunnisa@students.undip.ac.id</p>
       </div>
 
       <div className="cat-profile">
