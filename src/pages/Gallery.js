@@ -1,16 +1,13 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import CardBig from "../component/CardBig";
-import CatFunFact from "../component/CatFunFact"; 
+import CatFunFact from "../component/CatFunFact";
 import "./Gallery.css";
 
-const Gallery = ({ breed }) => {
+const Gallery = () => {
   const [catImages, setCatImages] = useState([]);
   const [selectedBreed, setSelectedBreed] = useState("");
   const [breeds, setBreeds] = useState([]);
-  const [setBreedInfo] = useState(null);
-  const [showModal, setShowModal] = useState(false);
-  const [catFunFact, setCatFunFact] = useState("");
   const navigate = useNavigate();
 
   const fetchCatImages = async (breed) => {
@@ -35,49 +32,28 @@ const Gallery = ({ breed }) => {
     }
   };
 
-  const fetchBreedInfo = async (breedId) => {
-    try {
-      const response = await fetch(`https://api.thecatapi.com/v1/breeds/${breedId}`);
-      const data = await response.json();
-      setBreedInfo(data);
-    } catch (error) {
-      console.error("Error fetching breed details:", error);
-    }
-  };
-
-  const fetchCatFunFact = async () => {
-    try {
-      const response = await fetch("https://cat-facts12.p.rapidapi.com/Fact", {
-        method: "GET",
-        headers: {
-          'X-RapidAPI-Host': 'cat-facts12.p.rapidapi.com',
-          "X-RapidAPI-Key": "593a9c5d11msh21b7f3d237350bep1aeaa3jsn4fb4d407a147",
-        },
-      });
-      const data = await response.json();
-      setCatFunFact(data.text);
-    } catch (error) {
-      console.error("Error fetching cat fun fact:", error);
-    }
-  };
-
   const handleBreedChange = (e) => {
     const newBreedId = e.target.value;
     setSelectedBreed(newBreedId);
     if (newBreedId) {
-      fetchBreedInfo(newBreedId);
       navigate(`/breed/${newBreedId}`);
     }
   };
 
-  const showCatFunFact = () => {
-    fetchCatFunFact();
-    setShowModal(true);
-  };
-
-  const hideCatFunFact = () => {
-    setCatFunFact("");
-    setShowModal(false);
+  const showCatFunFact = async () => {
+    try {
+      const response = await fetch('https://cat-facts12.p.rapidapi.com/Fact', {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Host': 'cat-facts12.p.rapidapi.com',
+          'X-RapidAPI-Key': '593a9c5d11msh21b7f3d237350bep1aeaa3jsn4fb4d407a147',
+        },
+      });
+      const data = await response.json();
+      CatFunFact({ catFunFact: data.text });
+    } catch (error) {
+      console.error("Error fetching cat fun fact:", error);
+    }
   };
 
   useEffect(() => {
@@ -117,10 +93,6 @@ const Gallery = ({ breed }) => {
           ))}
         </div>
       </div>
-
-      {showModal && (
-        <CatFunFact catFunFact={catFunFact} closeModal={hideCatFunFact} />
-      )}
     </div>
   );
 };
